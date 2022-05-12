@@ -1,0 +1,101 @@
+import numpy as np
+
+# to check version
+# print(np.version)
+# print(np.show_config())
+# print(np.info(np.add))
+
+# to test numbers in array
+
+# a=np.array([0,1,2,3,4,5,0, np.nan, np.inf])
+# print("original array:")
+# print(a)
+#
+# print("to test zeros in array:")
+# print(np.all(a))
+#
+# print("test again for zero element  be true:")
+# print(np.any(a))
+#
+# print("to check if it is finite:")
+# print(np.isfinite(a))
+#
+# print("to check positive negettive or infinity")
+# print(np.isinf(a))
+#
+# print("check for nan")
+# print(np.isnan(a))
+
+# b=np.array([1+1j, 0,1, np.nan, 4.4, -4,3, 2j])
+# print("complex or real or scaler array")
+# print(np.iscomplex(b))
+# print(np.isreal(b))
+# print(np.isscalar(b))
+
+
+# comparison between numbers
+# x = np.array([3, 5,5])
+# y = np.array([2, 5,2])
+# print("Original numbers:")
+# print(x)
+# print(y)
+# print("Comparison - greater")
+# print(np.greater(x, y))
+# print(np.greater(y,x))
+# print("Comparison - greater_equal")
+# print(np.greater_equal(x, y))
+# print("Comparison - less")
+# print(np.less(x, y))
+# print("Comparison - less_equal")
+# print(np.less_equal(x, y))
+
+# d= np.array([72, 79, 85, 90, 150, -135, 120, -10, 60, 100])
+# e = np.array([72, 79, 85, 90, 150, -135, 120, -10, 60, 100.000001])
+# print("Original numbers:")
+# print(d)
+# print(e)
+# print("Comparison - equal:")
+# print(np.equal(d, e))
+# print("Comparison - equal within a tolerance:")
+# print(np.allclose(d, e))
+
+# print(d.size,d.itemsize)
+
+# zeros and ines function
+# array=np.zeros(10)
+# print("An array of 10 zeros:")
+# print(array)
+# array=np.ones(10)
+# print("An array of 10 ones:")
+# print(array)
+# array=np.ones(10)*5
+# print("An array of 10 fives:")
+# print(array)
+
+# f=np.arange(5)
+# print(f)
+# array=np.arange(30,71)
+# print("Array of the integers from 30 to70")
+# print(array)
+#
+# array=np.arange(30,71,2)
+# print("Array of all the even integers from 30 to 70")
+# print(array)
+
+# array_2D=np.identity(4)
+# print('3x3 matrix:')
+# print(array_2D)
+
+# rand_num = np.random.normal(0,1,2)
+# print("Random number between 0 and 1:")
+# print(rand_num)
+
+rand_num = np.random.normal(0,1,15)
+print("15 random numbers from a standard normal distribution:")
+print(rand_num)
+
+v = np.arange(15,55)
+print("Original:")
+print(v)
+print("All except the first and last value:")
+print(v[1:-1])
