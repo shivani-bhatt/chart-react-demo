@@ -85,17 +85,80 @@ import numpy as np
 # array_2D=np.identity(4)
 # print('3x3 matrix:')
 # print(array_2D)
+# x = np.eye(3)
+# print(x)
+# x = np.diag([1, 2, 3, 4, 5])
+# print(x)
+# x = np.random.random((3, 3, 3))
+# print(x)
 
 # rand_num = np.random.normal(0,1,2)
 # print("Random number between 0 and 1:")
 # print(rand_num)
 
-rand_num = np.random.normal(0,1,15)
-print("15 random numbers from a standard normal distribution:")
-print(rand_num)
+# rand_num = np.random.normal(0,1,15)
+# print("15 random numbers from a standard normal distribution:")
+# print(rand_num)
 
-v = np.arange(15,55)
-print("Original:")
+# v = np.arange(15,55)
+# print("Original:")
+# print(v)
+# print("All except the first and last value:")
+# print(v[1:-1])
+#
+# v = np.linspace(10, 49, 5)
+# print("Length 10 with values evenly distributed between 5 and 50:")
+# print(v)
+
+# a = np.arange(10,22).reshape((3, 4))
+# print("Original array:")
+# print(a)
+# print("Number of rows and columns of the said matrix:")
+# print(a.shape)
+
+# x = np.random.randint(0, 11, 5)
+# print("Vector of length 5 filled with arbitrary integers from 0 to 10:")
+# print(x)
+#
+# x = np.array([1, 8, 3, 5])
+# print("Vector-1")
+# print(x)
+# y= np.random.randint(0, 11, 4)
+# print("Vector-2")
+# print(y)
+# result = x * y
+# print("Multiply the values of two said vectors:")
+# print(result)
+#
+# inner product of matrices
+# x = np.array([4, 5])
+# y = np.array([7, 10])
+# print("Original vectors:")
+# print(x)
+# print(y)
+# print("Inner product of said vectors:")
+# print(np.dot(x, y))
+
+# sum of matries
+# x = np.array([[0,1],[2,3]])
+# print("Original array:")
+# print(x)
+# print("Sum of all elements:")
+# print(np.sum(x))
+# print("Sum of each column:")
+# print(np.sum(x, axis=0))
+# print("Sum of each row:")
+# print(np.sum(x, axis=1))
+
+# addition of a vector
+m = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+v = np.array([1, 1, 0])
+print("Original vector:")
 print(v)
-print("All except the first and last value:")
-print(v[1:-1])
+print("Original matrix:")
+print(m)
+result = np.empty_like(m)
+for i in range(4):
+  result[i, :] = m[i, :] + v
+print("\nAfter adding the vector v to each row of the matrix m:")
+print(result)
