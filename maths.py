@@ -129,12 +129,74 @@ import numpy as np
 # plt.axis([0, 100, 0, 200])
 # # Display the figure.
 # plt.show()
-#
+
 # # Sampled time at 200ms intervals
 # t = np.arange(0., 5., 0.2)
 #
 # # green dashes, blue squares and red triangles
 # plt.plot(t, t, 'g--', t, t**2, 'bs', t, t**3, 'r^')
+# plt.grid(linestyle='-', linewidth='5', color='blue')
+# plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
 # plt.show()
 
+
+# x = ['Java', 'Python', 'PHP', 'JavaScript', 'C#', 'C++']
+# popularity = [22.2, 17.6, 8.8, 8, 7.7, 6.7]
+# x_pos = [i for i, _ in enumerate(x)]
+# plt.bar(x_pos, popularity, color='blue')
+# plt.xlabel("Languages")
+# plt.ylabel("Popularity")
+# plt.title("PopularitY of Programming Language\n" + "Worldwide, Oct 2017 compared to a year ago")
+# plt.xticks(x_pos, x)
+# # Turn on the grid
+# plt.minorticks_on()
+# plt.grid(which='major', linestyle='-', linewidth='0.5', color='red')
+# # Customize the minor grid
+# plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
+# plt.show()
+
+# x = ['Java', 'Python', 'PHP', 'JS', 'C#', 'C++']
+# popularity = [22.2, 17.6, 8.8, 8, 7.7, 6.7]
+# x_pos = [i for i, _ in enumerate(x)]
+# plt.barh(x_pos, popularity, color='green')
+# plt.xlabel("Popularity")
+# plt.ylabel("Languages")
+# plt.title("PopularitY of Programming Language\n" + "Worldwide, Oct 2017 compared to a year ago")
+# plt.yticks(x_pos, x)
+# # Turn on the grid
+# plt.minorticks_on()
+# plt.grid(which='major', linestyle='-', linewidth='0.5', color='red')
+# # Customize the minor grid
+# plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
+# plt.show()
+
+
+# x = ['Java', 'Python', 'PHP', 'JavaScript', 'C#', 'C++']
+# popularity = [22.2, 17.6, 8.8, 8, 7.7, 6.7]
+# x_pos = [i for i, _ in enumerate(x)]
+#
+# plt.bar(x_pos, popularity, color=['red', 'black', 'green', 'blue', 'yellow', 'cyan'])
+#
+# plt.xlabel("Languages")
+# plt.ylabel("Popularity")
+# plt.title("PopularitY of Programming Language\n" + "Worldwide, Oct 2017 compared to a year ago")
+# plt.xticks(x_pos, x)
+# # Turn on the grid
+# plt.minorticks_on()
+# plt.grid(which='major', linestyle='-', linewidth='0.5', color='red')
+# # Customize the minor grid
+# plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
+# plt.show()
+
+# languages = 'Java', 'Python', 'PHP', 'JavaScript', 'C#', 'C++'
+# popuratity = [22.2, 17.6, 8.8, 8, 7.7, 6.7]
+# #colors = ['red', 'gold', 'yellowgreen', 'blue', 'lightcoral', 'lightskyblue']
+# colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"]
+# # explode 1st slice
+# explode = (0.1, 0, 0, 0, 0, 0)
+# # Plot
+# plt.pie(popuratity, explode=explode, labels=languages, colors=colors,
+# autopct='%1.1f%%', shadow=True, startangle=140)
+# plt.title("PopularitY of Programming Language\n" + "Worldwide, Oct 2017 compared to a year ago", bbox={'facecolor':'0.8', 'pad':5})
+# plt.show()
 
