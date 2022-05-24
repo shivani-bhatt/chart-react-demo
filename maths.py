@@ -1,5 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
+import pandas as pd
+
 
 # X = range(1, 50)
 # Y = [value * 3 for value in X]
@@ -198,5 +201,78 @@ import numpy as np
 # plt.pie(popuratity, explode=explode, labels=languages, colors=colors,
 # autopct='%1.1f%%', shadow=True, startangle=140)
 # plt.title("PopularitY of Programming Language\n" + "Worldwide, Oct 2017 compared to a year ago", bbox={'facecolor':'0.8', 'pad':5})
+# plt.show()
+
+
+# Tips database is the record of the tip given by the customers in a restaurant for two and a half months in the
+# early 1990s. It contains 6 columns such as total_bill, tip, sex, smoker, day, time, size.
+
+
+# reading the database
+# data = pd.read_csv("tips.csv")
+# pdata = pd.read_csv("penguins.csv")
+# # Scatter plot with day against tip
+# plt.scatter(data['day'], data['tip'], c=data['size'],
+#             s=data['total_bill'])
+#
+# # Adding Title to the Plot
+# plt.title("Scatter Plot")
+#
+# # Setting the X and Y labels
+# plt.xlabel('Day')
+# plt.ylabel('Tip')
+#
+# plt.colorbar()
+#
+# plt.show()
+
+# plt.bar(data['day'], data['tip'])
+#
+# plt.title("Bar Chart")
+#
+# # Setting the X and Y labels
+# plt.xlabel('Day')
+# plt.ylabel('Tip')
+#
+# # Adding the legends
+# plt.show()
+
+# plt.hist(data['total_bill'])
+#
+# plt.title("Histogram")
+#
+# # Adding the legends
+# plt.show()
+
+# plt.plot(data['tip'])
+# plt.plot(data['size'])
+#
+# # Adding Title to the Plot
+# plt.title("Scatter Plot")
+#
+# # Setting the X and Y labels
+# plt.xlabel('Day')
+# plt.ylabel('Tip')
+#
+# plt.show()
+
+# smokers database using seaborn
+
+# sns.scatterplot(x="total_bill", y="tip", data=data, hue="size", palette="ch:r=-.65,l=.5", size="size", sizes=(15, 200))
+# sns.lineplot(x="total_bill", y="tip", data=data, hue="size", palette="ch:r=-.65,l=.5")
+# sns.lineplot(x='day', y='tip', data=data)
+
+# sns.lineplot(data=data.drop(['total_bill'], axis=1))
+# sns.barplot(x='day',y='tip', data=data, hue='size')
+# sns.barplot(x='day',y='tip', data=data, hue='tip')
+#  totalbill=data.total_bill+ data.tip
+# sns.barplot(x='total_bill',y='tip', data=data, hue='day')
+
+# print(totalbill)
+# plt.title('Total bill vs tip ')
+# sns.set_theme(style="ticks")
+
+# df = sns.load_dataset("penguins")
+# a = sns.pairplot(df, hue="species")
 # plt.show()
 
